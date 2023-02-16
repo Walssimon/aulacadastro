@@ -1,24 +1,14 @@
 <?php 
-$con = mysqli_connect("localhost","root","");
-//Checando a conexão
 
-if (mysqli_connect_errno($con)){
-echo "Erro ao conectar com a base de dados: ".
+	$server_name = 'localhost';
+	$user_name = 'reverendo';
+	$password = '123456';
+	$db_name = 'dbFieis';
 
-mysqli_connect_error();
-} else {
+	$connection = mysqli_connect($server_name,$user_name,$password,$db_name);
 
-	$sql = "CREATE DATABASE seitapam";
-	if (mysqli_query($con,$sql)){
+	mysqli_set_charset($connection,"utf8");
 
-	echo "Conexão Aberta";		
-	}else{
-
-		echo "<br/> Erro: ".mysqli_error($con);
+	if (mysqli_connect_error()) {
+		echo "Erro ao conectar com o forno sagrado, ore com mais fervor" . mysql_connect_error();
 	}
-	
-	echo "Conexão Aberta";
-
-}
-
-?>
