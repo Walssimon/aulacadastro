@@ -35,7 +35,7 @@
 			
 						<tr>
 							<td><?php echo $dados['nome']; ?></td>
-							<td><?php echo $dados['cpf']; ?></td>
+							<td><?php echo $dados['CPF']; ?></td>
 							<td><?php echo $dados['email']; ?></td>
 							<td><?php echo $dados['telefone']; ?></td>
 
@@ -44,7 +44,7 @@
 							<td><a href="#modal<?php echo $dados['idFiel']; ?>" class="btn-floating red modal-trigger"><i class="material-icons">delete</i></a></td>
 
 							<!-- Modal Structure in Materializecss -->
-							  <div id="modal<?php echo $dados['idFIel']; ?>" class="modal">
+							  <div id="modal<?php echo $dados['idFiel']; ?>" class="modal">
 							    <div class="modal-content">
 							      <h4>Aviso.</h4>
 							      <p>Ele Blasfemou ??</p>

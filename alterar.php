@@ -7,7 +7,7 @@
 
 		$id = mysqli_escape_string($connection, $_GET['id']);
 
-		$sql = "SELECT * FROM Fieis WHERE idFiel = '$id'";
+		$sql = "SELECT * FROM Fiel WHERE idFiel = '$id'";
 
 		$resultado = mysqli_query($connection,$sql);
 
@@ -26,7 +26,7 @@
 				<input type="hidden" name = "idFiel" value="<?php echo $dados['idFiel']; ?>">
 				
 				<div class="input-field col s12">
-					<input type="text" name="nome" id="nome" value="<?php echo $dados['nomeCli']; ?>">
+					<input type="text" name="nome" id="nome" value="<?php echo $dados['nome']; ?>">
 					<label for="nome">Nome</label>
 				</div>
 				
@@ -37,7 +37,7 @@
 				</div>
 				
 				<div class="input-field col s12">
-					<input type="text" name="email" id="email" value="<?php echo $dados['emailCli']; ?>">
+					<input type="text" name="email" id="email" value="<?php echo $dados['email']; ?>">
 					<label for="email">Endereço Celestial</label>
 				</div>
 				

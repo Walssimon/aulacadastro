@@ -2,7 +2,7 @@
 
 	session_start();
 
-	require_once 'conexao_bd.php';
+	require_once 'cad.php';
 
 	if (isset($_POST['btn-alterar'])) {
 		
@@ -12,7 +12,7 @@
 		$tel = mysqli_escape_string($connection,$_POST['tel']);
 		$idFiel = mysqli_escape_string($connection,$_POST['idFiel']);
 
-		$sql = "UPDATE tbClientes SET nomeCli = '$nome', sobreNomeCli = '$cpf', emailCli = '$email', idadeCli = '$tel' WHERE idFiel = '$idFiel'";
+		$sql = "UPDATE Fiel SET nome = '$nome', CPF = '$cpf', email = '$email', telefone = '$tel' WHERE idFiel = '$idFiel'";
 
 		if(mysqli_query($connection, $sql)) {
 
